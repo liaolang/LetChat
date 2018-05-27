@@ -1,24 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-toolbar color="secondary">
+        
         <ion-icon name="ios-chatbubbles-outline"> <ion-title>LetChat</ion-title></ion-icon>       
       </ion-toolbar>
   </ion-navbar>
 </ion-header>
-
 <ion-content class="card-background-page">  
-    <ion-item  >
-      <ion-label floating>Username</ion-label>
+<ion-card>   
+  
+    <ion-item>
+      <ion-label class="textbox" floating>LetChat ID</ion-label>
       <ion-input type="text" [(ngModel)]="username"></ion-input>
     </ion-item>
-    <button ion-button color="light" round large (click)="loginUser()">Login</button>
-  
-    <ion-card>    
-      <ion-card-header padding>
+
+    <button ion-button color="light" round large (click)="loginUser()">Login</button>  
+      <ion-card-header class="text" padding>
               LetChat allows you to make FREE SMS
       </ion-card-header>
-      <ion-card-content>
-                Whenever, Wherever 
+      <ion-card-content >
+               Whenever, Wherever 
       </ion-card-content>     
   </ion-card>
 
