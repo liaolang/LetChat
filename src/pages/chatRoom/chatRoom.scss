@@ -9,30 +9,30 @@ page-chat {
 		color: rgb(252, 252, 252);
 		
 	}
+
 	.innerMessage.messageRight {
 		background: color($colors, 'secondary');
 	}
+
 	.username {
 		font-weight: bold;
 		font-size: 80%;
-		color: rgb(0, 0, 0);
+		color: rgb(27, 27, 27);
 	}
+
 	.message {
 		font-size: 125%;
 	}
+
 	.elem button {
-	    border-radius: 30px;
-	    margin: 5px;
-	    position: absolute;
-	    top: 0;
-	    left: 20px;
-	  	 width: 50%;
-		height: 80%;
-		 
+	    border-radius: 35px;
+	    position: absolute;	     
+		height: 88%;		 
 	}
+
 	.elem {
 		position: relative;
-		min-width: 80px;
+		min-width: 86px;
 	}
 	div#footer div.elem:first-child {
 	    flex-grow: 1;
@@ -43,23 +43,25 @@ page-chat {
 	    align-items: stretch;
 	}
 
-	ion-input{
-		 
-		font-size: 160%;
-	 
+	ion-input{		 
+		font-size: 160%;	 
 	}
+
 	ion-toolbar {
 		margin: 0;
 		padding: 0!important;
 	}
+
 	.message:after {
 		content: '';
 		display: block;
 		clear: both;
 	}
+
 	.messageLeft {
 		float: left;
 	}
+
 	.messageRight {
 		float: right;
 	}
@@ -79,8 +81,7 @@ page-chat {
 		top: 80%;
 		position: absolute;
 		left: 0;
-		width: 100%;
-		
+		width: 100%;		
 	}
 
 	.message.special .innerMessage{
