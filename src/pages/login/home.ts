@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
-import { ChatPage } from '../chatRoom/chat';
-
+import { ChatPage } from '../chatRoom/chatRoom';
+ 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -35,3 +35,4 @@ export class HomePage {
     }
 
 }
+ 

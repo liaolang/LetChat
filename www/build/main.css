@@ -25303,7 +25303,7 @@ page-chat .message.special .innerMessage:before {
 
 page-chat .message.special .innerMessage {
   background: transparent;
-  color: black;
+  color: #474242;
   font-size: 70%;
   width: 110%;
   float: none;
@@ -25313,8 +25313,19 @@ page-chat .message.special .innerMessage {
 
 page-home {
   font: 100% Helvetica, sans-serif;
+  text-align: center;
 }
 
-.card-background-page ion-card {
+page-home ion-toolbar {
+  text-shadow: 2px 2px 5px black;
   text-align: center;
+}
+
+page-home button {
+  border: 1.5px solid #6da320;
+  width: 300px;
+}
+
+page-home ion-card {
+  color: #688fd3;
 }

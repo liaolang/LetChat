@@ -1,16 +1,26 @@
-
 page-home {
- 
    font: 100% Helvetica, sans-serif;
-   
-  
- 
-}
-.card-background-page {
-
-    ion-card {
-      text-align: center;
+   text-align: center;
+    
+     
+   ion-toolbar{ 
+     text-shadow: 2px 2px 5px black;
+     text-align: center;
     }
   
- 
+    button{
+      border: 1.5px solid rgb(109, 163, 32);  
+        width:300px;
+         
+    }
+
+    ion-card {
+      color: map-get($colors, primary);
+      
+  
   }
+}
+
+ 
+  
+ 

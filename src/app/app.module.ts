@@ -7,7 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/login/home';
 import { AngularFireModule } from 'angularfire2';
-import { ChatPage } from '../pages/chatRoom/chat';
+import { ChatPage } from '../pages/chatRoom/chatRoom';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 var config = {

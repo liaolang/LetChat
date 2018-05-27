@@ -33,7 +33,7 @@ webpackEmptyAsyncContext.id = 153;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chatRoom_chat__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chatRoom_chatRoom__ = __webpack_require__(198);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -62,7 +62,7 @@ var HomePage = (function () {
     };
     HomePage.prototype.loginUser = function () {
         if (/^[a-zA-Z0-9]+$/.test(this.username)) {
-            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__chatRoom_chat__["a" /* ChatPage */], {
+            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__chatRoom_chatRoom__["a" /* ChatPage */], {
                 username: this.username
             });
         }
@@ -74,7 +74,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/lenny/Downloads/LetChat/src/pages/login/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-toolbar color="secondary">\n        <ion-title>LetChat</ion-title>\n      </ion-toolbar>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n    <ion-content class="card-background-page">\n      <ion-card>\n        <ion-card-header>\n          Whenever, Wherever\n        </ion-card-header>\n        <ion-card-content>\n          A new communication app which allows you to make FREE message\n        </ion-card-content>\n      </ion-card>\n   \n\n  <ion-item>\n    <ion-label floating>Username</ion-label>\n    <ion-input type="text" [(ngModel)]="username"></ion-input>\n  </ion-item>\n	<button ion-button color="light" round large (click)="loginUser()">Login</button>\n</ion-content>\n'/*ion-inline-end:"/Users/lenny/Downloads/LetChat/src/pages/login/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/lenny/Downloads/LetChat/src/pages/login/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-toolbar color="secondary">\n        <ion-icon name="ios-chatbubbles-outline"> <ion-title>LetChat</ion-title></ion-icon>       \n      </ion-toolbar>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="card-background-page">  \n    <ion-item  >\n      <ion-label floating>Username</ion-label>\n      <ion-input type="text" [(ngModel)]="username"></ion-input>\n    </ion-item>\n    <button ion-button color="light" round large (click)="loginUser()">Login</button>\n  \n    <ion-card>    \n      <ion-card-header padding>\n              LetChat allows you to make FREE SMS\n      </ion-card-header>\n      <ion-card-content>\n                Whenever, Wherever \n      </ion-card-content>     \n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/lenny/Downloads/LetChat/src/pages/login/home.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
@@ -104,13 +104,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-/**
-* Generated class for the ChatPage page.
-*
-* See http://ionicframework.com/docs/components/#navigation for more info
-* on Ionic pages and navigation.
-*/
-//@IonicPage()
 var ChatPage = (function () {
     function ChatPage(db, navCtrl, navParams) {
         var _this = this;
@@ -153,13 +146,13 @@ var ChatPage = (function () {
 }());
 ChatPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-chat',template:/*ion-inline-start:"/Users/lenny/Downloads/LetChat/src/pages/chatRoom/chat.html"*/'<!--\nGenerated template for the ChatPage page.\n\nSee http://ionicframework.com/docs/components/#navigation for more info on\nIonic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Chat Room</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <div id="chatMessages">\n    <div *ngFor="let message of messages" [class]="message.specialMessage ? \'message special\' : \'message\'">\n      <div [class]="message.username == username ? \'innerMessage messageRight\' : \'innerMessage messageLeft\'">\n        <div class="username">{{ message.username }}</div>\n        <div class="messageContent">{{ message.message }}</div>\n      </div>\n    </div>\n  </div>\n\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <div id="footer">\n        \n      <div class="elem"><ion-input type="text" [(ngModel)]="message"></ion-input></div>\n      <div class="elem"><button ion-button icon-only  color="dark" (click)="sendMessage()"><ion-icon name="send"></ion-icon> </button></div>\n    </div>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/Users/lenny/Downloads/LetChat/src/pages/chatRoom/chat.html"*/,
+        selector: 'page-chat',template:/*ion-inline-start:"/Users/lenny/Downloads/LetChat/src/pages/chatRoom/chatRoom.html"*/'<!--\nGenerated template for the ChatPage page.\n\nSee http://ionicframework.com/docs/components/#navigation for more info on\nIonic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar  color="secondary">\n    <ion-title >Chat Room</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <div id="chatMessages">\n    <div *ngFor="let message of messages" [class]="message.specialMessage ? \'message special\' : \'message\'">\n      <div [class]="message.username == username ? \'innerMessage messageRight\' : \'innerMessage messageLeft\'">\n        <div class="username">{{ message.username }}</div>\n        <div class="messageContent">{{ message.message }}</div>\n      </div>\n    </div>\n  </div>\n\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <div id="footer">\n        \n      <div class="elem"><ion-input type="text" [(ngModel)]="message"></ion-input></div>\n      <div class="elem"><button ion-button icon-only  color="dark" (click)="sendMessage()"><ion-icon name="ios-add-circle-outline"></ion-icon> </button></div>\n    </div>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/Users/lenny/Downloads/LetChat/src/pages/chatRoom/chatRoom.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["a" /* AngularFireDatabase */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
 ], ChatPage);
 
-//# sourceMappingURL=chat.js.map
+//# sourceMappingURL=chatRoom.js.map
 
 /***/ }),
 
@@ -190,7 +183,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(276);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_home__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angularfire2__ = __webpack_require__(296);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_chatRoom_chat__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_chatRoom_chatRoom__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_angularfire2_database__ = __webpack_require__(199);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -226,7 +219,7 @@ AppModule = __decorate([
         declarations: [
             __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
             __WEBPACK_IMPORTED_MODULE_6__pages_login_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_chatRoom_chat__["a" /* ChatPage */],
+            __WEBPACK_IMPORTED_MODULE_8__pages_chatRoom_chatRoom__["a" /* ChatPage */],
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -238,7 +231,7 @@ AppModule = __decorate([
         entryComponents: [
             __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
             __WEBPACK_IMPORTED_MODULE_6__pages_login_home__["a" /* HomePage */],
-            __WEBPACK_IMPORTED_MODULE_8__pages_chatRoom_chat__["a" /* ChatPage */]
+            __WEBPACK_IMPORTED_MODULE_8__pages_chatRoom_chatRoom__["a" /* ChatPage */]
         ],
         providers: [
             __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
