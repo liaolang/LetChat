@@ -114,12 +114,12 @@ var ChatPage = (function () {
         this.message = '';
         this.messages = [];
         this.username = this.navParams.get('username');
-        this._chatSubscription = this.db.list('/chat').subscribe(function (data) {
+        this._chatSubscription = this.db.list('/records').subscribe(function (data) {
             _this.messages = data;
         });
     }
     ChatPage.prototype.sendMessage = function () {
-        this.db.list('/chat').push({
+        this.db.list('/records').push({
             username: this.username,
             message: this.message
         }).then(function () {
@@ -128,16 +128,16 @@ var ChatPage = (function () {
         this.message = '';
     };
     ChatPage.prototype.ionViewDidLoad = function () {
-        this.db.list('/chat').push({
+        this.db.list('/records').push({
             specialMessage: true,
             message: this.username + " says \"Hello\""
         });
     };
     ChatPage.prototype.ionViewWillLeave = function () {
         this._chatSubscription.unsubscribe();
-        this.db.list('/chat').push({
+        this.db.list('/records').push({
             specialMessage: true,
-            message: this.username + " say \"See you all\""
+            message: this.username + " says \"See you all\""
         });
     };
     return ChatPage;

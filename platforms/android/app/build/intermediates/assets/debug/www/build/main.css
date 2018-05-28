@@ -25228,17 +25228,17 @@ page-chat ion-input {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  border: 0.8px solid #577c5c;
+  border: 0.8px solid #719476;
   border-left: 5px solid #fa6363;
-  background: #fdffe8;
-  margin-left: 18px;
+  background: #f7f8e6;
+  margin-left: 10px;
 }
 
 page-chat .elem button {
   border-radius: 35px;
   position: absolute;
   height: 88%;
-  margin-left: 18px;
+  margin-left: 20px;
 }
 
 page-chat .elem {
@@ -25298,10 +25298,10 @@ page-chat .message.special .innerMessage:before {
   content: '';
   z-index: -1;
   height: 0.5px;
-  background: #e0e0e0;
+  background: #adabab;
   display: block;
   position: absolute;
-  width: 89%;
+  width: 85%;
 }
 
 page-chat .message.special .innerMessage {
@@ -25348,4 +25348,8 @@ page-home .text {
 
 page-home ion-card {
   color: #719fee;
+}
+
+page-home .card-background-page {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(8, #031804), color-stop(0.51, #fffbe7));
 }

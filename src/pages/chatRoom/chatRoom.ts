@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import {  NavController, NavParams } from 'ionic-angular';
+import { AngularFireDatabase } from 'angularfire2/database';
 
  
 @Component({
@@ -17,13 +17,13 @@ export class ChatPage {
   constructor(public db: AngularFireDatabase,
     public navCtrl: NavController, public navParams: NavParams) {
       this.username = this.navParams.get('username');
-      this._chatSubscription = this.db.list('/chat').subscribe( data => {
+      this._chatSubscription = this.db.list('/records').subscribe( data => {
         this.messages = data;
       });
     }
 
     sendMessage() {
-      this.db.list('/chat').push({
+      this.db.list('/records').push({
         username: this.username,
         message: this.message
       }).then( () => {   // sent message 
@@ -35,7 +35,7 @@ export class ChatPage {
     }
 
     ionViewDidLoad() {
-      this.db.list('/chat').push({
+      this.db.list('/records').push({
         specialMessage: true,
         message: `${this.username} says "Hello"`
       });
@@ -43,9 +43,9 @@ export class ChatPage {
 
     ionViewWillLeave(){
       this._chatSubscription.unsubscribe();
-      this.db.list('/chat').push({
+      this.db.list('/records').push({
         specialMessage: true,
-        message: `${this.username} say "See you all"`
+        message: `${this.username} says "See you all"`
       });
     }
   }

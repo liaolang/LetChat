@@ -25289,29 +25289,31 @@ page-chat .messageRight {
 }
 
 page-chat .message.special .innerMessage .messageContent {
-  background: #f0f0f0;
+  background: #8a8a8a;
   display: inline-block;
-  padding: 15 15px;
+  border-radius: 311px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 page-chat .message.special .innerMessage:before {
   content: '';
-  z-index: -1;
   height: 0.5px;
-  background: #e0e0e0;
+  background: #f0ecec;
   display: block;
+  width: 100%;
+  left: 0;
   position: absolute;
-  width: 89%;
+  z-index: -1;
 }
 
 page-chat .message.special .innerMessage {
   background: transparent;
-  color: #474242;
-  font-size: 70%;
-  width: 110%;
+  color: #e6e4e4;
+  font-size: 60%;
+  width: 100%;
   float: none;
   text-align: center;
-  position: relative;
 }
 
 page-home {

@@ -74,30 +74,33 @@ page-chat {
 	}
 
 	.message.special .innerMessage .messageContent{
-		background: rgb(240, 240, 240);
+		background: rgb(138, 138, 138);
 		display: inline-block;
-		padding: 15 15px;
+		border-radius: 311px;
+		padding-left: 8px;
+		padding-right: 8px;
 	}
 
-	.message.special .innerMessage:before{
+	.message.special .innerMessage:before{ //line
 		content: '';
-		z-index: -1;
 		height: 0.5px;
-		background: rgb(224, 224, 224);
-		display: block;
-		position: absolute;	 
-		width: 89%;	
-	 
+        background: rgb(240, 236, 236);
+        display: block;
+     
+        width: 100%;
+        left: 0;
+        position: absolute;
+        z-index: -1;
 	}
 
-	.message.special .innerMessage{
+	.message.special .innerMessage{ // line font
 		background: transparent;
-		color: rgb(71, 66, 66);
-		font-size: 70%;
-		width: 110%;
+		color: rgb(230, 228, 228);
+		font-size: 60%;
+		width: 100%;
 		float: none;
 		text-align: center;
-		position: relative;
+	 
 	}
 
 } 
