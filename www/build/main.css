@@ -25214,6 +25214,7 @@ chatRoomPage .innerMessage.messageRight {
   border-top-left-radius: 20px;
   border-top-right-radius: 12px;
   border-bottom-left-radius: 20px;
+  float: right;
 }
 
 chatRoomPage .innerMessage.messageLeft {
@@ -25221,6 +25222,7 @@ chatRoomPage .innerMessage.messageLeft {
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 12px;
+  float: left;
 }
 
 chatRoomPage .username {
@@ -25291,14 +25293,6 @@ chatRoomPage .message:after {
   content: '';
   display: block;
   clear: both;
-}
-
-chatRoomPage .messageLeft {
-  float: left;
-}
-
-chatRoomPage .messageRight {
-  float: right;
 }
 
 chatRoomPage .message.special .innerMessage .messageContent {

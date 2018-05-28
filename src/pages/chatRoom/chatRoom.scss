@@ -1,7 +1,6 @@
 chatRoomPage {
 	
-	 .title{
-	 
+	 .title{	 
 		text-shadow: 2px 2px 5px black;
 	 }
 
@@ -18,14 +17,14 @@ chatRoomPage {
 		border-top-left-radius: 20px;
 		border-top-right-radius: 12px;
 		border-bottom-left-radius: 20px;
-		 
+		float: right; 
 	}
 	.innerMessage.messageLeft {
 		background: color($colors, 'primary');		
 		border-bottom-right-radius: 20px;
 		border-top-right-radius: 20px;
 		border-bottom-left-radius: 12px;
-		 
+		float: left;
 	}
 	.username {	
 		font-size: 75%;
@@ -84,13 +83,7 @@ chatRoomPage {
 		clear: both;
 	}
 
-	.messageLeft {
-		float: left;
-	}
-
-	.messageRight {
-		float: right;
-	}
+  
 
 	.message.special .innerMessage .messageContent{
 		background: rgb(155, 155, 155);
