@@ -1,5 +1,5 @@
 page-chat {
-
+	 
 	.innerMessage {	 
 		border-radius: 20px;
 		padding: 4px 15px;
@@ -12,8 +12,7 @@ page-chat {
 		background: color($colors, 'secondary');
 	}
 
-	.username {
-		
+	.username {	
 		font-size: 75%;
 		color: rgb(27, 27, 27);
 	}
@@ -24,19 +23,21 @@ page-chat {
 	}
 
 	ion-input{	           // input box   
+		
 		border-radius: 11px;	 
 		font-size: 160%;	 
 		flex:1;
-		border:0.8px solid  rgb(87, 124, 92);	 
+		border:0.8px solid  rgb(113, 148, 118);	 
 		border-left:5px solid rgb(250, 99, 99);
-		background:rgb(253, 255, 232);
+		background:rgb(247, 248, 230);
+		margin-left: 10px;
 	}
 
 	.elem button {       // sent button
 	    border-radius: 35px;
 	    position: absolute;	     
 		height: 88%;		
-		 margin-left: 18px;
+		 margin-left: 20px;
 	}
 
 	.elem {
@@ -52,8 +53,6 @@ page-chat {
 	    flex-direction: row;
 	    align-items: stretch;
 	}
-
-	
 
 	ion-toolbar {
 		margin: 0;

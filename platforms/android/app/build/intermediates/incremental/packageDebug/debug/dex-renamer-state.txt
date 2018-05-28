@@ -1,4 +1,4 @@
-#Sun May 27 20:37:10 AEST 2018
+#Mon May 28 13:53:11 AEST 2018
 base.0=/Users/lenny/Downloads/LetChat/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 renamed.0=classes.dex
 file.0=/Users/lenny/Downloads/LetChat/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex
