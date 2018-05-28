@@ -10,7 +10,7 @@ import { AngularFireModule } from 'angularfire2';
 import { ChatPage } from '../pages/chatRoom/chatRoom';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
-var config = {
+var config = {//contect to firebase
  
     apiKey: "AIzaSyDGJabw3EfIsm9aPEat6UjRL_ViTHEACvI",
     authDomain: "letchat-2f07f.firebaseapp.com",

@@ -4,7 +4,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 
  
 @Component({
-  selector: 'page-chat',
+  selector: 'chatRoomPage',
   templateUrl: 'chatRoom.html',
 })
 export class ChatPage {

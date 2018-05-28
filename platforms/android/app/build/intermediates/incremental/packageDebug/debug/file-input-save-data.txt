@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon May 28 15:49:51 AEST 2018
+#Mon May 28 16:17:45 AEST 2018
 25.file=/Users/lenny/Downloads/LetChat/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_/res/drawable-land-xxhdpi-v4/screen.png
 41.base=/Users/lenny/Downloads/LetChat/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_
 25.base=/Users/lenny/Downloads/LetChat/platforms/android/app/build/intermediates/res/debug/resources-debug.ap_

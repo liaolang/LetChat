@@ -1,25 +1,43 @@
-page-chat {
+chatRoomPage {
+	
+	 .title{
 	 
+		text-shadow: 2px 2px 5px black;
+	 }
+
 	.innerMessage {	 
-		border-radius: 20px;
-		padding: 4px 15px;
-		background: color($colors, 'primary');
+	 
+		padding: 4px 19px;	
 		margin: 3px;
-		color: rgb(252, 252, 252);		
+		color: rgb(252, 252, 252);	
+		
 	}
 
 	.innerMessage.messageRight {
 		background: color($colors, 'secondary');
+		border-top-left-radius: 20px;
+		border-top-right-radius: 12px;
+		border-bottom-left-radius: 20px;
+		 
 	}
-
+	.innerMessage.messageLeft {
+		background: color($colors, 'primary');		
+		border-bottom-right-radius: 20px;
+		border-top-right-radius: 20px;
+		border-bottom-left-radius: 12px;
+		 
+	}
 	.username {	
 		font-size: 75%;
-		color: rgb(27, 27, 27);
+		color: rgb(51, 51, 51);
+		font-style: oblique;
+	 
 	}
 
 	.message {
 		font-size: 129%;
-		font-weight: bold;		 
+		font-weight: bold;	
+		 
 	}
 
 	ion-input{	           // input box   
@@ -57,6 +75,7 @@ page-chat {
 	ion-toolbar {
 		margin: 0;
 		padding: 0!important;
+		 
 	}
 
 	.message:after {
@@ -74,7 +93,7 @@ page-chat {
 	}
 
 	.message.special .innerMessage .messageContent{
-		background: rgb(138, 138, 138);
+		background: rgb(155, 155, 155);
 		display: inline-block;
 		border-radius: 311px;
 		padding-left: 8px;
@@ -85,8 +104,7 @@ page-chat {
 		content: '';
 		height: 0.5px;
         background: rgb(240, 236, 236);
-        display: block;
-     
+        display: block;  
         width: 100%;
         left: 0;
         position: absolute;

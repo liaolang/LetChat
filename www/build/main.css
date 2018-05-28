@@ -25199,29 +25199,42 @@ ion-navbar.toolbar {
   }
 }
 
-page-chat .innerMessage {
-  border-radius: 20px;
-  padding: 4px 15px;
-  background: #719fee;
+chatRoomPage .title {
+  text-shadow: 2px 2px 5px black;
+}
+
+chatRoomPage .innerMessage {
+  padding: 4px 19px;
   margin: 3px;
   color: #fcfcfc;
 }
 
-page-chat .innerMessage.messageRight {
+chatRoomPage .innerMessage.messageRight {
   background: #12ad6d;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 20px;
 }
 
-page-chat .username {
+chatRoomPage .innerMessage.messageLeft {
+  background: #719fee;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 12px;
+}
+
+chatRoomPage .username {
   font-size: 75%;
-  color: #1b1b1b;
+  color: #333333;
+  font-style: oblique;
 }
 
-page-chat .message {
+chatRoomPage .message {
   font-size: 129%;
   font-weight: bold;
 }
 
-page-chat ion-input {
+chatRoomPage ion-input {
   border-radius: 11px;
   font-size: 160%;
   -webkit-box-flex: 1;
@@ -25234,26 +25247,26 @@ page-chat ion-input {
   margin-left: 10px;
 }
 
-page-chat .elem button {
+chatRoomPage .elem button {
   border-radius: 35px;
   position: absolute;
   height: 88%;
   margin-left: 20px;
 }
 
-page-chat .elem {
+chatRoomPage .elem {
   position: relative;
   min-width: 86px;
 }
 
-page-chat div#footer div.elem:first-child {
+chatRoomPage div#footer div.elem:first-child {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-page-chat div#footer {
+chatRoomPage div#footer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25269,34 +25282,34 @@ page-chat div#footer {
   align-items: stretch;
 }
 
-page-chat ion-toolbar {
+chatRoomPage ion-toolbar {
   margin: 0;
   padding: 0 !important;
 }
 
-page-chat .message:after {
+chatRoomPage .message:after {
   content: '';
   display: block;
   clear: both;
 }
 
-page-chat .messageLeft {
+chatRoomPage .messageLeft {
   float: left;
 }
 
-page-chat .messageRight {
+chatRoomPage .messageRight {
   float: right;
 }
 
-page-chat .message.special .innerMessage .messageContent {
-  background: #8a8a8a;
+chatRoomPage .message.special .innerMessage .messageContent {
+  background: #9b9b9b;
   display: inline-block;
   border-radius: 311px;
   padding-left: 8px;
   padding-right: 8px;
 }
 
-page-chat .message.special .innerMessage:before {
+chatRoomPage .message.special .innerMessage:before {
   content: '';
   height: 0.5px;
   background: #f0ecec;
@@ -25307,7 +25320,7 @@ page-chat .message.special .innerMessage:before {
   z-index: -1;
 }
 
-page-chat .message.special .innerMessage {
+chatRoomPage .message.special .innerMessage {
   background: transparent;
   color: #e6e4e4;
   font-size: 60%;
