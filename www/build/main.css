@@ -25200,7 +25200,6 @@ ion-navbar.toolbar {
 }
 
 page-chat .innerMessage {
-  display: inline-block;
   border-radius: 20px;
   padding: 4px 15px;
   background: #719fee;
@@ -25213,19 +25212,32 @@ page-chat .innerMessage.messageRight {
 }
 
 page-chat .username {
-  font-weight: bold;
-  font-size: 80%;
+  font-size: 75%;
   color: #1b1b1b;
 }
 
 page-chat .message {
-  font-size: 125%;
+  font-size: 129%;
+  font-weight: bold;
+}
+
+page-chat ion-input {
+  border-radius: 11px;
+  font-size: 160%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  border: 0.8px solid #577c5c;
+  border-left: 5px solid #fa6363;
+  background: #fdffe8;
 }
 
 page-chat .elem button {
   border-radius: 35px;
   position: absolute;
   height: 88%;
+  margin-left: 18px;
 }
 
 page-chat .elem {
@@ -25256,10 +25268,6 @@ page-chat div#footer {
   align-items: stretch;
 }
 
-page-chat ion-input {
-  font-size: 160%;
-}
-
 page-chat ion-toolbar {
   margin: 0;
   padding: 0 !important;
@@ -25282,19 +25290,17 @@ page-chat .messageRight {
 page-chat .message.special .innerMessage .messageContent {
   background: #f0f0f0;
   display: inline-block;
-  padding: 10 10px;
+  padding: 15 15px;
 }
 
 page-chat .message.special .innerMessage:before {
   content: '';
   z-index: -1;
-  height: 1px;
+  height: 0.5px;
   background: #e0e0e0;
   display: block;
-  top: 80%;
   position: absolute;
-  left: 0;
-  width: 100%;
+  width: 89%;
 }
 
 page-chat .message.special .innerMessage {

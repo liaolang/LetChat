@@ -1,13 +1,11 @@
 page-chat {
- 
-	.innerMessage {
-		display: inline-block;
+
+	.innerMessage {	 
 		border-radius: 20px;
 		padding: 4px 15px;
 		background: color($colors, 'primary');
 		margin: 3px;
-		color: rgb(252, 252, 252);
-		
+		color: rgb(252, 252, 252);		
 	}
 
 	.innerMessage.messageRight {
@@ -15,24 +13,36 @@ page-chat {
 	}
 
 	.username {
-		font-weight: bold;
-		font-size: 80%;
+		
+		font-size: 75%;
 		color: rgb(27, 27, 27);
 	}
 
 	.message {
-		font-size: 125%;
+		font-size: 129%;
+		font-weight: bold;		 
 	}
 
-	.elem button {
+	ion-input{	           // input box   
+		border-radius: 11px;	 
+		font-size: 160%;	 
+		flex:1;
+		border:0.8px solid  rgb(87, 124, 92);	 
+		border-left:5px solid rgb(250, 99, 99);
+		background:rgb(253, 255, 232);
+	}
+
+	.elem button {       // sent button
 	    border-radius: 35px;
 	    position: absolute;	     
-		height: 88%;		 
+		height: 88%;		
+		 margin-left: 18px;
 	}
 
 	.elem {
 		position: relative;
 		min-width: 86px;
+ 
 	}
 	div#footer div.elem:first-child {
 	    flex-grow: 1;
@@ -43,9 +53,7 @@ page-chat {
 	    align-items: stretch;
 	}
 
-	ion-input{		 
-		font-size: 160%;	 
-	}
+	
 
 	ion-toolbar {
 		margin: 0;
@@ -69,19 +77,18 @@ page-chat {
 	.message.special .innerMessage .messageContent{
 		background: rgb(240, 240, 240);
 		display: inline-block;
-		padding: 10 10px;
+		padding: 15 15px;
 	}
 
 	.message.special .innerMessage:before{
 		content: '';
 		z-index: -1;
-		height: 1px;
+		height: 0.5px;
 		background: rgb(224, 224, 224);
 		display: block;
-		top: 80%;
-		position: absolute;
-		left: 0;
-		width: 100%;		
+		position: absolute;	 
+		width: 89%;	
+	 
 	}
 
 	.message.special .innerMessage{
@@ -93,4 +100,6 @@ page-chat {
 		text-align: center;
 		position: relative;
 	}
-}
+
+} 
+ 
