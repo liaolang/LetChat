@@ -7,7 +7,7 @@ Ionic pages and navigation.
 <ion-header>
 
   <ion-navbar  color="secondary">
-    <ion-title id="title">Chat Room</ion-title>
+    <ion-title id="title"> 👾 Chat Room</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -19,7 +19,7 @@ Ionic pages and navigation.
     <div *ngFor="let message of messages" [class]="message.specialMessage ? 'message special' : 'message'">
       <div [class]="message.username == username ? 'innerMessage messageRight' : 'innerMessage messageLeft'">
         <div class="username">{{ message.username }}</div>
-        <div class="messageContent">{{ message.message }}</div>
+        <div class="messageContent"> {{ message.message }}</div>
       </div>
     </div>
   </div>
@@ -30,7 +30,7 @@ Ionic pages and navigation.
   <ion-toolbar>
     <div id="footer">
         
-      <div class="elem"><ion-input type="text"  placeholder="Type in something " [(ngModel)]="message"></ion-input></div>
+      <div class="elem"><ion-input type="text"  placeholder="Type in something... " [(ngModel)]="message"></ion-input></div>
       <div class="elem"><button ion-button icon-only  color="dark" (click)="sendMessage()"><ion-icon name="ios-add-circle-outline"></ion-icon> </button></div>
     </div>
   </ion-toolbar>
