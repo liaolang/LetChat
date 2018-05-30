@@ -25258,15 +25258,7 @@ chatRoomPage .username {
 }
 
 chatRoomPage ion-content {
-  /*
-	    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(8, rgb(253, 252, 246)),
-        color-stop(0.51, rgb(255, 251, 231))
-	);*/
-  background-image: url("../assets/img/roomWall.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(8, #f1fce9), color-stop(0.51, #d3d6d2));
 }
 
 chatRoomPage ion-input {
