@@ -11,13 +11,12 @@ page-home {
    
   }
     
-    button{
+    button{    
       border: 1.5px solid rgb(109, 163, 32);  
         width:200px;   
         *{
           font-family: mytitle;
-        }
-        
+        }       
     }
 
     .textbox {
@@ -33,7 +32,7 @@ page-home {
 
     .text{
       margin-top: 55px;
-      text-decoration: underline;
+      text-decoration-line: overline;
       font-size:14px;
       font-weight: bold;    
       color: rgb(100, 100, 100);

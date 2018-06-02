@@ -25258,7 +25258,7 @@ chatRoomPage .username {
 }
 
 chatRoomPage ion-content {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(8, #f1fce9), color-stop(0.51, #cdd6ca));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(8, #f1f8ec), color-stop(0.51, #cfd3cd));
 }
 
 chatRoomPage ion-input {
@@ -25279,6 +25279,7 @@ chatRoomPage .elem button {
   position: absolute;
   height: 88%;
   margin-left: 20px;
+  border: 0.8px solid #103501;
 }
 
 chatRoomPage .elem {
@@ -25383,7 +25384,8 @@ page-home .textbox {
 
 page-home .text {
   margin-top: 55px;
-  text-decoration: underline;
+  -webkit-text-decoration-line: overline;
+  text-decoration-line: overline;
   font-size: 14px;
   font-weight: bold;
   color: #646464;

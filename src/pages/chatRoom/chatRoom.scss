@@ -45,9 +45,9 @@ chatRoomPage {
         linear,
         left top,
         left bottom,
-        color-stop(8, rgb(241, 252, 233)),
-        color-stop(0.51, rgb(205, 214, 202))
-	);
+        color-stop(8, rgb(241, 248, 236)),
+        color-stop(0.51, rgb(207, 211, 205))
+		);
 	 
 	}
 
@@ -67,8 +67,8 @@ chatRoomPage {
 	    border-radius: 35px;
 	    position: absolute;	     
 		height: 88%;		
-		 margin-left: 20px;
-	 
+		margin-left: 20px;
+		border:0.8px solid  rgb(16, 53, 1);	 
 	}
 
 	.elem {
