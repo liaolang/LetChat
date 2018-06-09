@@ -11,29 +11,17 @@ export class ChatPage {
 
   username: string = '';
   message: string = '';
-  _chatSubscription;
+  Subscription;
   messages: object[] = [];
 
   constructor(public db: AngularFireDatabase,
     public navCtrl: NavController, public navParams: NavParams) {
       this.username = this.navParams.get('username');
-      this._chatSubscription = this.db.list('/records').subscribe( data => {
+      this.Subscription = this.db.list('/records').subscribe( data => {
         this.messages = data;
       });
     }
-
-    sendMessage() {
-      this.db.list('/records').push({
-        username: this.username,
-        message: this.message
-      }).then( () => {   // sent message 
-     
-      }).catch( () => { // maybe firebase error is unreachable
-        
-      });
-      this.message = '';
-    }
-
+    
     ionViewDidLoad() {
       this.db.list('/records').push({
         specialMessage: true,
@@ -42,10 +30,24 @@ export class ChatPage {
     }
 
     ionViewWillLeave(){
-      this._chatSubscription.unsubscribe();
+      this.Subscription.unsubscribe();
       this.db.list('/records').push({
         specialMessage: true,
         message: `${this.username} says "See you all"`
       });
     }
+
+    sendMessage() {
+      this.db.list('/records').push({
+        username: this.username,
+        message: this.message
+      }).then( () => { // Senting message 
+     
+      }).catch( () => {  // form firebase 
+        
+      });
+      this.message = '';
+    }
+
+    
   }

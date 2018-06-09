@@ -1,53 +1,58 @@
 page-home {
   
-   font: 100% Helvetica, sans-serif;
-    
+  font: 100% Helvetica, sans-serif;
     .title{// h1 //
       *{
         font-family: mytitle3;
-        font-size: 30px;              
+        font-size: 30px;          
     }
     text-align: center;
-   
   }
     
-    button{    
+  button{    //login button 
       border: 1.5px solid rgb(109, 163, 32);  
-        width:200px;   
+      font-weight: bold;
+      width:170px;   
         *{
-          font-family: mytitle;
+          font-family: mytitle1;
         }       
     }
 
-    .textbox {
-      margin-top: 35px;
+  .textbox {
+      margin-top: 1px;
       background-color: rgb(248, 248, 242);
       padding-left: 20px;
       height: 25px;
       font-size:18px;
-      border-radius: 3px;
-      border: 1px solid rgb(233, 231, 231);
+      border-radius: 11px;
+      border: 1px solid rgb(233, 231, 231);  
+      font-weight: bold;    
+      font-style: italic;
        
     }
 
-    .text{
-      margin-top: 55px;
-      text-decoration-line: overline;
+  .text{
+      margin-top: 16px;
+      text-decoration-line: inherit;
       font-size:14px;
-      font-weight: bold;    
-      color: rgb(100, 100, 100);
+      color: rgb(122, 121, 121);
       text-align: center;
-    
+      margin-bottom: -8px;
     }
 
-    ion-card {
+    ion-card {   
       color: map-get($colors, primary);
       text-align: center;
+  
   }
 
   .card-background-page{ 
-    background-image: url("../assets/img/myImage.jpg");
-    
+    background-image: url("../assets/img/myImage4.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:center bottom;
+    background-size: auto;
+    background-color: black;
   /*  background-image:-webkit-gradient(
         linear,
         left top,

@@ -27,7 +27,7 @@ export class LoginPage {
                 username: this.username
             });
         } else {
-            this.showAlert('😎', 'Please enter your name!'); // Error
+            this.showAlert('😎', 'Please enter your name!'); //showing Error
         }
     }
 

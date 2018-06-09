@@ -67,14 +67,14 @@ var LoginPage = (function () {
             });
         }
         else {
-            this.showAlert('😎', 'Please enter your name!'); // Error
+            this.showAlert('😎', 'Please enter your name!'); //showing Error
         }
     };
     return LoginPage;
 }());
 LoginPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/lenny/Downloads/LetChat/src/pages/login/loginPage.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-toolbar color="secondary">\n            \n        <ion-title  > <img  height="30" src="assets/img/logo.png">LetChat </ion-title>     \n      </ion-toolbar> \n  </ion-navbar>\n</ion-header>\n<ion-content class="card-background-page">  \n<ion-card>   \n  \n    <ion-item>\n      <ion-label class="textbox" floating>LetChat ID</ion-label>\n      <ion-input type="text" [(ngModel)]="username"></ion-input>\n    </ion-item>\n\n    <button ion-button color="light" round large (click)="loginUser()">Login</button>  \n      <ion-card-header class="text" padding>\n              LetChat allows you to make FREE SMS\n      </ion-card-header>\n      <ion-card-content >\n               Whenever, Wherever \n      </ion-card-content>     \n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/lenny/Downloads/LetChat/src/pages/login/loginPage.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/lenny/Downloads/LetChat backup/src/pages/login/loginPage.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-toolbar color="secondary">    \n        <ion-title  > <img  height="30" src="assets/img/logo.png">LetChat </ion-title>     \n      </ion-toolbar> \n  </ion-navbar>\n</ion-header>\n<ion-content class="card-background-page">  \n<ion-card>   \n  \n    <ion-item>\n      <ion-label class="textbox" floating>>> LetChat ID</ion-label>\n      <ion-input type="text" [(ngModel)]="username"></ion-input>\n    </ion-item>\n\n    <button ion-button color="light" ion-button round (click)="loginUser()">Login</button>  \n      <ion-card-header class="text" padding>\n              LetChat allows you to make FREE SMS\n      </ion-card-header>\n      <ion-card-content >\n               Whenever, Wherever \n      </ion-card-content>     \n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/lenny/Downloads/LetChat backup/src/pages/login/loginPage.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
@@ -114,10 +114,23 @@ var ChatPage = (function () {
         this.message = '';
         this.messages = [];
         this.username = this.navParams.get('username');
-        this._chatSubscription = this.db.list('/records').subscribe(function (data) {
+        this.Subscription = this.db.list('/records').subscribe(function (data) {
             _this.messages = data;
         });
     }
+    ChatPage.prototype.ionViewDidLoad = function () {
+        this.db.list('/records').push({
+            specialMessage: true,
+            message: this.username + " says \"Hello\""
+        });
+    };
+    ChatPage.prototype.ionViewWillLeave = function () {
+        this.Subscription.unsubscribe();
+        this.db.list('/records').push({
+            specialMessage: true,
+            message: this.username + " says \"See you all\""
+        });
+    };
     ChatPage.prototype.sendMessage = function () {
         this.db.list('/records').push({
             username: this.username,
@@ -127,24 +140,11 @@ var ChatPage = (function () {
         });
         this.message = '';
     };
-    ChatPage.prototype.ionViewDidLoad = function () {
-        this.db.list('/records').push({
-            specialMessage: true,
-            message: this.username + " says \"Hello\""
-        });
-    };
-    ChatPage.prototype.ionViewWillLeave = function () {
-        this._chatSubscription.unsubscribe();
-        this.db.list('/records').push({
-            specialMessage: true,
-            message: this.username + " says \"See you all\""
-        });
-    };
     return ChatPage;
 }());
 ChatPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'chatRoomPage',template:/*ion-inline-start:"/Users/lenny/Downloads/LetChat/src/pages/chatRoom/chatRoom.html"*/'<!--\nGenerated template for the ChatPage page.\n\nSee http://ionicframework.com/docs/components/#navigation for more info on\nIonic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar  color="secondary">\n    <ion-title id="title"> 👾 Chat Room</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <div id="chatMessages">\n    <div *ngFor="let message of messages" [class]="message.specialMessage ? \'message special\' : \'message\'">\n      <div [class]="message.username == username ? \'innerMessage messageRight\' : \'innerMessage messageLeft\'">\n        <div class="username">{{ message.username }}</div>\n        <div class="messageContent"> {{ message.message }}</div>\n      </div>\n    </div>\n  </div>\n\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <div id="footer">\n        \n      <div class="elem"><ion-input type="text"  placeholder="Type in something... " [(ngModel)]="message"></ion-input></div>\n      <div class="elem"><button ion-button icon-only  color="dark" (click)="sendMessage()"><ion-icon name="ios-add-circle-outline"></ion-icon> </button></div>\n    </div>\n  </ion-toolbar>\n</ion-footer>\n'/*ion-inline-end:"/Users/lenny/Downloads/LetChat/src/pages/chatRoom/chatRoom.html"*/,
+        selector: 'chatRoomPage',template:/*ion-inline-start:"/Users/lenny/Downloads/LetChat backup/src/pages/chatRoom/chatRoom.html"*/'<ion-header>\n\n  <ion-navbar  color="secondary">\n    <ion-title id="title"> 👾 Chat Room</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n  <div id="chatMessages">\n    <div *ngFor="let message of messages" [class]="message.specialMessage ? \'message special\' : \'message\'">\n      <div [class]="message.username == username ? \'innerMessage messageRight\' : \'innerMessage messageLeft\'">\n        <div class="username">{{ message.username }}</div>\n        <div class="messageContent"> {{ message.message }}</div>\n      </div>\n    </div>\n  </div>\n\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <div id="footer">    \n      <div class="sent"><ion-input type="text"  placeholder="Type in something... " [(ngModel)]="message"></ion-input></div>\n      <div class="sent"><button ion-button icon-only  color="light" ion-button color="danger" (click)="sendMessage()"><ion-icon name="md-flash"></ion-icon> </button></div>\n    </div>\n  </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/Users/lenny/Downloads/LetChat backup/src/pages/chatRoom/chatRoom.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["a" /* AngularFireDatabase */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
@@ -278,7 +278,7 @@ var LetChat = (function () {
     return LetChat;
 }());
 LetChat = __decorate([
-    Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/lenny/Downloads/LetChat/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/lenny/Downloads/LetChat/src/app/app.html"*/
+    Object(__WEBPACK_IMPORTED_MODULE_2__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/lenny/Downloads/LetChat backup/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/lenny/Downloads/LetChat backup/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3_ionic_angular__["g" /* Platform */], __WEBPACK_IMPORTED_MODULE_0__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_1__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], LetChat);

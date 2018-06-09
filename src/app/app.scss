@@ -18,7 +18,7 @@
 // automatically applied to the <body> element in the app.
 @font-face{
     font-family: mytitle ;
-    src: url('../assets/fonts/Faster One.woff2') format('woff2');
+    src: url('../assets/fonts/Eater.woff2') format('woff2');
      
 }
 @font-face{
@@ -26,10 +26,14 @@
     
     src: url('../assets/fonts/Montserrat.woff2') format('woff2');
 }
-
+@font-face{
+    font-family: mytitle1 ;
+    
+    src: url('../assets/fonts/Faster One.woff2') format('woff2');
+}
 /*
 *{
-    font-family: mytitle3;
+    font-family: mytitle2; Faster One
 }
 */
 @font-face{
