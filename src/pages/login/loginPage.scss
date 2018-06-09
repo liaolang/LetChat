@@ -1,17 +1,16 @@
 page-home {
   
   font: 100% Helvetica, sans-serif;
-    .title{// h1 //
-      *{
+  .title{// h1 //
+  *{
         font-family: mytitle3;
         font-size: 30px;          
     }
     text-align: center;
   }
     
-  button{    //login button 
+  button{ //login button 
       border: 1.5px solid rgb(109, 163, 32);  
-      font-weight: bold;
       width:170px;   
         *{
           font-family: mytitle1;
@@ -19,16 +18,14 @@ page-home {
     }
 
   .textbox {
-      margin-top: 1px;
+      margin-top: 3px;
       background-color: rgb(248, 248, 242);
-      padding-left: 20px;
-      height: 25px;
-      font-size:18px;
+      padding-left: 10px;
+      height: 20px;
+      font-size:16px;
       border-radius: 11px;
-      border: 1px solid rgb(233, 231, 231);  
-      font-weight: bold;    
-      font-style: italic;
-       
+      border: 1px solid rgb(233, 231, 231);     
+      font-style: italic;            
     }
 
   .text{
@@ -38,6 +35,7 @@ page-home {
       color: rgb(122, 121, 121);
       text-align: center;
       margin-bottom: -8px;
+      font-weight: bold; 
     }
 
     ion-card {   
@@ -53,14 +51,6 @@ page-home {
     background-position:center bottom;
     background-size: auto;
     background-color: black;
-  /*  background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(8, rgb(3, 24, 4)),
-        color-stop(0.51, rgb(255, 251, 231))
-    );*/
-
   }
    
 }
